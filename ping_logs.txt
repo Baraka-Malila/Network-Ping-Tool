@@ -1,0 +1,2 @@
+Ping failed: 192.168.1.1
+Ping failed: 10.0.0.1
