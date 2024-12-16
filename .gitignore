@@ -1,0 +1,14 @@
+# Byte-compiled Python files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+env/
+venv/
+*.env
+
+# Dependency files
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
