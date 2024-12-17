@@ -12,3 +12,23 @@ venv/
 pip-log.txt
 pip-delete-this-directory.txt
 
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.idea/
+.vscode/
+*.iml
+
+# Python packaging files
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing outputs
+htmlcov/
+.coverage
+.tox/
+.pytest_cache/
