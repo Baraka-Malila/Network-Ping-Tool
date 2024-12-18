@@ -1,0 +1,8 @@
+Main Menu
+---------------------------------------------------
+1. Ping by IP Address
+2. Ping by Domain Name
+3. Ping Statistics
+4. Exit
+---------------------------------------------------
+> Select an option:
