@@ -1,7 +1,6 @@
 # Network Ping Tool
 
-A simple and efficient command-line tool for monitoring the availability and
-response times of network hosts by sending ICMP ping requests.
+A simple and efficient command-line tool for monitoring the availability and response times of network hosts by sending ICMP ping requests.
 
 ## Features
 
@@ -22,11 +21,25 @@ To run this tool, you need:
 ## Installation
 
 1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/network-ping-tool.git
-cd network-ping-tool
-```
+   ```bash
+   git clone https://github.com/yourusername/network-ping-tool.git
+   cd network-ping-tool
+   ```
+
 2. Install the required Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+### Basic Usage
+
+To ping a single host:
 ```bash
-pip install -r requirements.txt
+python ping_tool.py <host>
+```
+Example:
+```bash
+python ping_tool.py google.com
 ```
