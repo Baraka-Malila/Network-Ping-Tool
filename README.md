@@ -43,3 +43,29 @@ Example:
 ```bash
 python ping_tool.py google.com
 ```
+### Advanced Options
+
+- **Ping multiple hosts:**
+  ```bash
+  python ping_tool.py <host1> <host2> <host3>
+  ```
+
+- **Set the number of requests:**
+  ```bash
+  python ping_tool.py <host> --count <number>
+  ```
+
+- **Adjust the interval between requests:**
+  ```bash
+  python ping_tool.py <host> --interval <seconds>
+  ```
+
+- **Set a custom timeout for responses:**
+  ```bash
+  python ping_tool.py <host> --timeout <seconds>
+  ```
+
+- **Run in continuous mode:**
+  ```bash
+  python ping_tool.py <host> --continuous
+  ```
