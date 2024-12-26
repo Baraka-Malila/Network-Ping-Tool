@@ -69,3 +69,31 @@ python ping_tool.py google.com
   ```bash
   python ping_tool.py <host> --continuous
   ```
+### Example Commands
+
+Ping `example.com` 10 times with a 1-second interval:
+```bash
+python ping_tool.py example.com --count 10 --interval 1
+```
+
+Ping `192.168.1.1` continuously:
+```bash
+python ping_tool.py 192.168.1.1 --continuous
+```
+
+## Output
+
+The tool outputs the following:
+
+- **Live ping results**: Response time for each ping request.
+- **Summary statistics**: Total packets sent, received, lost, and average response time.
+
+Example output:
+```
+PING google.com (172.217.164.110):
+Reply from 172.217.164.110: time=24ms
+Reply from 172.217.164.110: time=23ms
+Reply from 172.217.164.110: time=25ms
+
+--- google.com ping statistics ---
+Packets: Sent = 3, Received = 3, Lost = 0
