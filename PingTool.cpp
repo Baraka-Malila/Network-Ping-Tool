@@ -14,3 +14,14 @@ void PingTool::saveLog(const std::string& log) {
         std::cerr << "[!] Unable to open log file.\n";
     }
 }
+
+void PingTool::scanNetworks() {
+    std::cout << "[*] Scanning for nearby networks...\n";
+    networks = {"192.168.1.1", "192.168.1.2", "10.0.0.1"}; // Dummy data for now
+    std::cout << "[+] Networks found:\n";
+    for (size_t i = 0; i < networks.size(); ++i) {
+        std::cout << "    " << i + 1 << ". " << networks[i] << "\n";
+    }
+}
+
+
