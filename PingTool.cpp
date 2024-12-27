@@ -24,7 +24,6 @@ void PingTool::scanNetworks() {
     }
 }
 
-
 void PingTool::pingNetwork(const std::string& ipAddress) {
     std::cout << "[*] Pinging " << ipAddress << "...\n";
     std::string command = "ping -c 4 " + ipAddress; // Linux ping command
@@ -35,7 +34,6 @@ void PingTool::pingNetwork(const std::string& ipAddress) {
         std::cout << "[!] Ping to " << ipAddress << " failed.\n";
     }
 }
-
 
 void PingTool::pingNetwork(const std::string& target, int count) {
     std::cout << "[*] Pinging " << target << " (" << count << " times)...\n";
