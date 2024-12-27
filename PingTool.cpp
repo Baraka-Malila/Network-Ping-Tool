@@ -25,3 +25,13 @@ void PingTool::scanNetworks() {
 }
 
 
+void PingTool::pingNetwork(const std::string& ipAddress) {
+    std::cout << "[*] Pinging " << ipAddress << "...\n";
+    std::string command = "ping -c 4 " + ipAddress; // Linux ping command
+    int result = system(command.c_str());
+    if (result == 0) {
+        std::cout << "[+] Ping to " << ipAddress << " succeeded.\n";
+    } else {
+        std::cout << "[!] Ping to " << ipAddress << " failed.\n";
+    }
+}
