@@ -35,3 +35,15 @@ void PingTool::pingNetwork(const std::string& ipAddress) {
         std::cout << "[!] Ping to " << ipAddress << " failed.\n";
     }
 }
+
+
+void PingTool::pingNetwork(const std::string& target, int count) {
+    std::cout << "[*] Pinging " << target << " (" << count << " times)...\n";
+    std::string command = "ping -c " + std::to_string(count) + " " + target; // Linux ping with count
+    int result = system(command.c_str());
+    if (result == 0) {
+        std::cout << "[+] Ping to " << target << " succeeded.\n";
+    } else {
+        std::cout << "[!] Ping to " << target << " failed.\n";
+    }
+}
