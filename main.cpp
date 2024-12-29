@@ -18,3 +18,15 @@ void displayIntro() {
     std::cout << "Creator: Baraka Malila\n";
     std::cout << "\033[0m\n"; // Reset color
 }
+
+void displayMenu() {
+    std::cout << "\033[1;34m"; // Blue color for the menu
+    std::cout << "\n--- Main Menu ---\n";
+    std::cout << "1. Scan Nearby Networks\n";
+    std::cout << "2. Ping a Network\n";
+    std::cout << "3. Exit\n";
+    std::cout << "\033[0m"; // Reset color
+    std::cout << "Choose an option: ";
+}
+
+
