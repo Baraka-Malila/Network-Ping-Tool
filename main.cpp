@@ -42,3 +42,27 @@ void displayPingMenu() {
 }
 
 
+int main() {
+    // Create a PingTool object with the log file path
+    PingTool pingTool("ping_logs.txt");
+
+    // Display intro with ASCII art and program details
+    displayIntro();
+
+    bool running = true;
+    while (running) {
+        displayMenu();
+        int choice;
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1:
+                pingTool.scanNetworks();
+                break;
+
+            case 2: {
+                bool pingMenu = true;
+                while (pingMenu) {
+                    displayPingMenu();
+                    int pingChoice;
+                    std::cin >> pingChoice;
