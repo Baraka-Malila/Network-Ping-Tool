@@ -66,3 +66,40 @@ int main() {
                     displayPingMenu();
                     int pingChoice;
                     std::cin >> pingChoice;
+switch (pingChoice) {
+                        case 1: {
+                            std::cout << "Enter the IP address to ping: ";
+                            std::string ipAddress;
+                            std::cin >> ipAddress;
+                            pingTool.pingNetwork(ipAddress);
+                            break;
+                        }
+                        case 2: {
+                            std::cout << "Enter the domain name to ping: ";
+                            std::string domainName;
+                            std::cin >> domainName;
+                            pingTool.pingNetwork(domainName); // Add domain handling
+                            break;
+                        }
+                        case 3: {
+                            std::cout << "Enter the number of pings: ";
+                            int count;
+                            std::cin >> count;
+                            std::cout << "Enter the IP or domain: ";
+                            std::string target;
+                            std::cin >> target;
+                            ingTool.pingNetwork(target, count); // Adjust implementation
+                            break;
+                        }
+                        case 4:
+                            pingMenu = false; // Back to main menu
+                            break;
+
+                        default:
+                            std::cout << "[!] Invalid option. Try again.\n";
+                            break;
+                    }
+                }
+                break;
+            }
+
