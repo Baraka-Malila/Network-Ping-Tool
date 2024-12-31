@@ -29,7 +29,6 @@ void displayMenu() {
     std::cout << "Choose an option: ";
 }
 
-
 void displayPingMenu() {
     std::cout << "\033[1;34m"; // Blue color for the menu
     std::cout << "\n--- Ping Menu ---\n";
@@ -40,7 +39,6 @@ void displayPingMenu() {
     std::cout << "\033[0m"; // Reset color
     std::cout << "Choose an option: ";
 }
-
 
 int main() {
     // Create a PingTool object with the log file path
@@ -66,7 +64,8 @@ int main() {
                     displayPingMenu();
                     int pingChoice;
                     std::cin >> pingChoice;
-switch (pingChoice) {
+
+                    switch (pingChoice) {
                         case 1: {
                             std::cout << "Enter the IP address to ping: ";
                             std::string ipAddress;
@@ -88,7 +87,7 @@ switch (pingChoice) {
                             std::cout << "Enter the IP or domain: ";
                             std::string target;
                             std::cin >> target;
-                            ingTool.pingNetwork(target, count); // Adjust implementation
+                            pingTool.pingNetwork(target, count); // Adjust implementation
                             break;
                         }
                         case 4:
@@ -103,3 +102,16 @@ switch (pingChoice) {
                 break;
             }
 
+            case 3:
+                std::cout << "[*] Exiting Maestro Ping Tool. Goodbye!\n";
+                running = false;
+                break;
+
+            default:
+                std::cout << "[!] Invalid option. Try again.\n";
+                break;
+        }
+    }
+
+    return 0;
+}
